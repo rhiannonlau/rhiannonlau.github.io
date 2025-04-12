@@ -1,0 +1,61 @@
+.img {
+    border: 1px solid #333333;
+}
+
+.img:hover {
+    box-shadow: 0px 8px 16px 0px #000000;
+}
+
+/* card for image and text of the current project */
+.currProjCard {
+    width: 50%;
+    box-shadow: 0 4px 8px 0 #111111;
+    transition: 0.3s;
+    float: left;
+}
+
+.currProjCard:hover {
+    box-shadow: 0 8px 16px 0 #111111;
+}
+
+/* text of the current project */
+.currProjCardText {
+    padding: 2px 16px;
+}
+
+/* container for the other projects in the gallery */
+.projGallery {
+    width: 20%;
+    float: left;
+    padding-left: 5%;
+}
+
+/* card for the other projects in the gallery */
+.projCard {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 #111111;
+    transition: 0.3s;
+}
+
+.projCard:hover {
+    box-shadow: 0 8px 16px 0 #111111;
+}
+
+/* text of the other projects */
+.projCardText {
+    padding: 2px 2px;
+}
+
+.text {
+    
+    font-size: 12px;
+    text-align: left;
+}
+
+.projContainer > div {
+    float: left;
+}

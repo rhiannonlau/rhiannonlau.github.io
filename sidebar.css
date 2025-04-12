@@ -1,0 +1,126 @@
+/* CSS stylesheet for sidebar, sidebar contents, and sidebar animations
+*/
+
+ /* key frames for the sidebar animation js function  */
+ @keyframes slide-right {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: -100%;
+        display: none;
+    }
+}
+
+/* sidebar design */
+.sidebarOpenBtn {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: inherit;
+    color: #DDDDDD;
+    text-align: center;
+}
+
+.sidebarOpenBtn:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #444444;
+    position: fixed!important; /*this allows it to slide over the content instead of moving it*/
+    z-index: 1; /*similar to layers, higher z-index is on top*/
+    overflow: auto;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 #111111;
+}
+
+.sidebarItem {
+    padding: 8px 16px;
+    float: left;
+    width: 75%;
+    background-color: inherit;
+    border: none;
+    color: #DDDDDD;
+    font-family: "Georgia", Times, Serif;
+    text-decoration: none;
+    text-align: left;
+    /*display: block;*/
+    outline: 0;
+    cursor: default;
+}
+
+.sidebarBtn:hover {
+    background-color: #333333;
+}
+
+.sidebarCloseBtn {
+    width: 100%;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-color: #333333;
+}
+
+.sidebarCloseBtn:hover {
+    background-color: #333333;
+}
+
+/* sidebar dropdown design */
+.sidebarDropdownBtn {
+    height: 35px;
+    width: 180px;
+    background-color: inherit;
+    padding: 4px 16px;
+    color: #DDDDDD;
+    font-family: "Georgia", Times, Serif;
+    font-size: 16px;
+    text-align: left;
+    border: none;
+}
+
+.sidebarDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sidebarDropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #444444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #222222;
+    z-index: 1;
+}
+
+.sidebarDropdownContent a {
+    color: #DDDDDD;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333333;
+}
+
+.sidebarDropdown:hover .sidebarDropdownContent{
+    display: block;
+}
+
+.sidebarDropdown:hover .sidebarDropdownBtn {
+    background-color: palegoldenrod;
+    color: #000000;
+}
