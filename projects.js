@@ -36,20 +36,20 @@ const PROJECTS=[
     },
     {
         id: 3,
-        image: 'res/cat.png',
-        title: 'Project 4',
-        status: 'In Progress',
-        skills: 'N/A',
-        description: '[description]',
+        image: 'res/cer.png',
+        title: 'Queen\'s Community Engagement Record',
+        status: 'Finished',
+        skills: 'Python Flask, MySQL',
+        description: 'Final year capstone project for Queen\'s University.',
         link: "projectTaskManager.php"
     },
     {
         id: 4,
-        image: 'res/cat.png',
-        title: 'Project 5',
+        image: 'res/PenwingsDream.png',
+        title: 'Penwing\'s Dream',
         status: 'In Progress',
-        skills: 'N/A',
-        description: '[description]',
+        skills: 'C#, Unity',
+        description: 'Time management platformer game. 2nd place at the Queen\'s Creative Computing Showcase 2025W.',
         link: "projectTaskManager.php"
     }
 ]

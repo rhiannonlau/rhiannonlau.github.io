@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+    <!-- Link to CSS and JS: -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="universal.css">
+    <script src="applications.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar" style="display: none;">
+        <button onclick="animate_sidebar()" class="sidebarItem sidebarCloseBtn large">Close &times;</button>
+        <a href='index.html' class="sidebarItem sidebarBtn">Home</a>
+        <a href='resumePage.html' class="sidebarItem sidebarBtn">Resume</a>
+        <div id="drop" class="sidebarDropdown">
+            <button class="sidebarDropdownBtn" href="projectsPage.html">Projects <span>&#x25BC;</span></button>
+            <div id="projectsDrop" class="sidebarDropdownContent">
+                <a href="projectsPage.html" class="sidebarItem sidebarBtn">All Projects</a>
+                <a href="#" class="sidebarItem sidebarBtn">Project 1</a>
+                <a href="#" class="sidebarItem sidebarBtn">Project 2</a>
+            </div>
+        </div>
+        <a href='aboutMePage.html' class="sidebarItem sidebarBtn">About Me</a>
+    </div>
+
+    <!-- Page -->
+    <div style="display: inline-flex;">
+        <button id="sidebarOpenBtn" onclick="animate_sidebar()" class="sidebarOpenBtn xlarge"><span>&#9776;</span></button>
+        <p style="color: #DDDDDD; padding-left: 10px;"><a style="color: #DDDDDD" href="projectsPage.html">Projects</a> &#9656 <b><a style="color: #DDDDDD" href="projectDanceAI.html">Dance AI</a></b></p>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/rhiannonlau" style="position: absolute; top: 8px; right: 130px"> <!-- target="_blank" opens link in new tab -->
+            <img src="res/github_logo_transparent.png" alt="Link to my Github"
+                style="
+                padding: 5px;
+                width: 100px;
+                -webkit-filter: invert(100%);
+                filter: invert(100%) brightness(85%);">
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rhiannon-lau-410362273/" style="position:absolute; padding-top: 20px; right: 16px">
+            <img src="res/linkedin_logo_transparent.webp" alt="Link to my LinkedIn"
+                style="
+                width: 100px;
+                filter: brightness(85%);">
+        </a>
+    </div>
+
+    <h1 class="white">Project: Queen's Community Engagment Record</h1>
+    <h2 class="white">Type: Capstone project</h2>
+    <p class="white large">Link: <a target="_blank" rel="noopener noreferrer" href="https://communityengagementrecord.azurewebsites.net/" class="yellow">communityengagementrecord.azurewebsites.net</a> (must have a Queen's account to access)</p>
+    <p class="white large">Technical details:</p>
+    <ul class="white large" style="list-style-type:disc; padding-left: 100px;">
+        <li>Group members: Three other Queen's students</li>
+        <li>Languages: Python, MySQL, HTML, CSS</li>
+        <li>Framework: Flask</li>
+        <li>Techniques: </li>
+    </ul>
+    <p class="white large">Description:</p>
+    <p class="white">The Community Engagment Record is a web application for Queen's students that allows them to log their extra-curricular activities and set goals and reflections
+        about these activities to create a portfolio that can be downloaded as a PDF and sent to employers or used in applications.
+        In addition, students can complete workplace skill self-assessments and keep track of their progress in skill areas over time.
+        Finally, administrators can log in to their accounts and view web analytics/statistics of student activity and engagement with the CER, as well as view all the users in the databases
+        and give/revoke admin privileges to other users.
+    </p>
+</body>
+</html>
