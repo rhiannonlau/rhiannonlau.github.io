@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { setProject } from '../state/actions';
+import { setProjects } from '../state/actions/projects';
 import { useDispatch, useSelector } from 'react-redux';
 // import { setError, setSuccess, setLoading } from ''
 import PROJECTS from '../data/projects';
