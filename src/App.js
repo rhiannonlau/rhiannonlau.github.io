@@ -23,30 +23,33 @@ import { ImGithub, ImLinkedin } from "react-icons/im";
 import githubImage from './assets/github_logo_transparent.png'
 import linkedinImage from './assets/linkedin_logo_transparent.webp'
 
-// import { useDispatch, useSelector } from 'react-redux';
-// import { openGit } from './state/actions/externalLink';
+import { useDispatch, useSelector } from 'react-redux';
+import { openGit } from './state/actions/externalLink';
 
-function Header({ onProjects, onAProject }) {
-    // const dispatch = useDispatch();
+const Header = () => {
+    const dispatch = useDispatch();
 
     return (
         <div>
             <button id="sidebarOpenBtn" onClick={animate_navbar} className="sidebarOpenBtn xlarge"><FiMenu /></button>
             {/* <p style="color: #DDDDDD; padding-left: 10px;"><a style={{color: '#DDDDDD'}} href="projects.html">Projects</a>{ aProject ? '&#9656 <b><a style="color: #DDDDDD" href="projectDanceAI.html">Dance AI</a></b>' : '' }</p> */}
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/rhiannonlau" className="github">
+            {/* <a target="_blank" rel="noopener noreferrer" href="https://github.com/rhiannonlau" className="github">
                 <img src={githubImage} alt="Link to my Github" className="github"></img>
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rhiannon-lau-410362273/" className="linkedin">
                 <img src={linkedinImage} alt="Link to my LinkedIn" className="linkedin"></img>
-            </a>
-            {/* <button onClick={() => dispatch(openGit())}><ImGithub /></button> */}
+            </a> */}
+            <button onClick={() => dispatch(openGit())}><ImGithub /></button>
         </div>
     );
 }
 
-const projectNames = PROJECTS.map(name => {
+const projectNames = PROJECTS.map((name, i) => {
     return (
-        <li><NavLink to={"/" + name} className="item btn">{name}</NavLink></li>
+        <div key={i}>
+            <li><NavLink to={"/" + name} className="item btn">{name}</NavLink></li>
+        </div>
+        
     )
 });
 
@@ -60,7 +63,7 @@ const Navbar = () => {
                 <div id="projectsDrop" className="content" style={{display: 'none'}}>
                     <ol>
                         <li><NavLink to="/projects" className="item btn">All Projects</NavLink></li>
-                        {projectNames}
+                        {/* {projectNames} */}
                     </ol>
                 </div>
             </div>
@@ -93,13 +96,13 @@ function animate_navbar() {
     }
 }
 
-const projectRoutes = projects.map(name => {
+const projectRoutes = PROJECTS.map(name => {
     return (
         <Route path={"/projects/" + ""} element={<AProject />} />
     )
 });
 
-export default function App() {
+const App = () => {
     return (
         <>
             <Header aProject={""} />
@@ -115,3 +118,5 @@ export default function App() {
         </>
     );
 }
+
+export default App;
