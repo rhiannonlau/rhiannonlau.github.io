@@ -1,0 +1,14 @@
+.sidebar {
+    
+}
+
+.option:hover {
+    /* background-color: #6594B1; */
+    text-shadow: 0 0 15px #6594B1;
+    font-size: 17px;
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
