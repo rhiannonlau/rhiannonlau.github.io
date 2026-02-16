@@ -5,9 +5,10 @@
     padding: 20px;
     width: 200px;
     height: 200px;
-    color: #EEEEEE;
+    color: inherit;
 }
 
 .card:hover {
     text-shadow: black;
+    cursor: default;
 }

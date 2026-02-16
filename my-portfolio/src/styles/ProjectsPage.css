@@ -1,4 +1,8 @@
-.main {
-    overflow-y: scroll;
+.main-page {
     height: 80%;
+}
+
+.projects-section {
+    overflow-y: auto;
+    height: 100%;
 }

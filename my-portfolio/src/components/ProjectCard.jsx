@@ -8,6 +8,7 @@ const ProjectCard = (props) => {
     const navigate = useNavigate()
 
     const viewProject = () => {
+        console.log(id);
         navigate('/projects/' + id)
     }
 
